@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parallax Cover</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Open Sans";
+            line-height: 1.618em;
+            background: #c6acea;
+        }
+        
+        .parallax {
+            perspective: 1px;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        
+        .layer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 100%;
+            margin: auto;
+        }
+        
+        .waveone {
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/waveone.svg");
+            margin-top: 85vh;
+            background-size: 101%;
+            position: absolute;
+        }
+        
+        .wavetwo {
+            transform: translateZ(-1px) scale(2);
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/wavetwo.svg");
+            margin-top: 150vh;
+            width: 100vw;
+        }
+        
+        .wavethree {
+            transform: translateZ(-2px) scale(3);
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/wavethree.svg");
+            margin-top: 200vh;
+            width: 100vw;
+        }
+        
+        .acme {
+            transform: translateZ(-3px) scale(4);
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/acme.svg");
+            width: 75vw;
+            margin-top: 60vh;
+        }
+        
+        .clouds {
+            transform: translateZ(-7px) scale(8);
+            background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/clouds.svg");
+            background-size: 150vh;
+            background-repeat: repeat-x;
+        }
+        
+        .content-outer {
+            margin-top: 8%;
+            background: #fff;
+            border-top: 50px solid #46b5ed;
+            width: 100%;
+        }
+        
+        .content {
+            max-width: 50rem;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parallax">
+
+        <div class="layer clouds"></div>
+        <div class="layer acme"></div>
+        <div class="layer wavethree"></div>
+        <div class="layer wavetwo"></div>
+
+        <div class="layer waveone">
+            <div class="content-outer">
+                <div class="content">
+                    <h1>CSS3 Parallax Cover Section</h1>
+                    <p>This is a cool vertical parallax scrolling effect that can be created in pure CSS.</p>
+                    <p>Note that the purpose of this pen is to act as a learning exercise, demonstrating the effects of CSS3 properties such as 3D transforms, SVG backgrounds, viewport units and so on.</p>
+                    <p>At the moment mobile compatibility with this technique is a little scratchy and it works best in landscape orientation, so it's not ideal for production use.</p>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae mollitia enim accusamus quis blanditiis temporibus laboriosam. Corporis libero iste, dicta labore cupiditate delectus doloribus incidunt inventore maiores dolor mollitia id..</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta suscipit quae laboriosam, quis, pariatur ipsa nesciunt repellendus laborum obcaecati cum nostrum ad labore cumque ut nihil consequuntur repudiandae ex inventore?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum deserunt provident sapiente eius rem ut voluptate et aperiam. Culpa fugit quod eum quae dolor commodi pariatur minus, tenetur quidem accusamus.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique explicabo magni veniam veritatis, dignissimos iusto voluptatum praesentium aliquid illum. Corrupti, doloremque, esse. Excepturi numquam, asperiores sunt dolores corporis, consectetur ex..</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem enim laboriosam officia iure, consectetur magnam rem adipisci libero quo fugit obcaecati odit quaerat, dignissimos cumque. Asperiores assumenda natus illo, repellat?</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eos, distinctio error quam iste, ad nesciunt consequatur doloribus nihil laborum id eum quo delectus, sequi voluptatibus qui unde quis? Autem.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
